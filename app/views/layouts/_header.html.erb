@@ -1,0 +1,20 @@
+<nav class="navbar navbar-ispick" role="navigation">
+  <!-- Render logo image in navbar's "brand" area -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <%# link_to image_tag(asset_path('ispick_logo_half0.png'), class: 'logo'), '/' %>
+  </div>
+
+  <!-- Render collapse items -->
+  <%= navbar_collapse id: 'menu' do %>
+    <%= navbar_group class: 'collapse-header' do %>
+      <!-- Other items is rendered by helper methods as usual -->
+      <%= navbar_item 'Requests', requests_path, class: 'collapse-item' %>
+    <% end %>
+  <% end %>
+</nav>
